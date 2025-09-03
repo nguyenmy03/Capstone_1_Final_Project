@@ -1,4 +1,4 @@
-# My Goals (Semester & Program)
+My Goals 
 
 ## Semester Goals
 -know more about business analytics and improve my accent
@@ -14,8 +14,3 @@ Interests: I love business
 My favorite food: Vietnamese food 
 
 
-# Repo Purpose
-This repository hosts my coursework and practice for analytics: notebooks, datasets, and dashboards.
-
-# Change Log
-- Rewrote README with goals and About Me for the assignment.

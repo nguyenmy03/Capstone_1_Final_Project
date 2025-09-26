@@ -1,0 +1,1 @@
+Hi [Name], I’m an MSBA student at UOP and saw you’re an alum. I’d love to connect and hear about your career journey and any advice you’d share with current students.

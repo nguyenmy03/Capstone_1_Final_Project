@@ -1,0 +1,92 @@
+[
+  {
+    "name": "academic_year",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The academic year this record refers to (e.g., '2024-25')."
+  },
+  {
+    "name": "county_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Name of the county where the school is located."
+  },
+  {
+    "name": "district_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Name of the school district that operates the school."
+  },
+  {
+    "name": "school_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Official name of the school."
+  },
+  {
+    "name": "school_type",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Type of school (e.g., Elementary, Middle, High, Charter)."
+  },
+  {
+    "name": "status",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Operational status of the school (e.g., Active, Closed)."
+  },
+  {
+    "name": "open_date",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Open date as text from source (e.g., '7/1/1980 12:00:00 AM')."
+  },
+  {
+    "name": "city",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "City where the school is located."
+  },
+  {
+    "name": "zip",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "ZIP or postal code for the school’s location."
+  },
+  {
+    "name": "latitude",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Latitude coordinate of the school (WGS84 format)."
+  },
+  {
+    "name": "longitude",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Longitude coordinate of the school (WGS84 format)."
+  },
+  {
+    "name": "enroll_total",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total number of enrolled students at the school."
+  },
+  {
+    "name": "african_american",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Percentage of students identified as African American."
+  },
+  {
+    "name": "hispanic",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Percentage of students identified as Hispanic or Latino."
+  },
+  {
+    "name": "asian",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Percentage of students identified as Asian."
+  }
+]

@@ -1,3 +1,20 @@
+"""
+## 🧠 Script Usage Instructions
+
+This script (`assgn5/collect_sample.py`) creates a small working sample (≈750–800 rows)
+for the A5 pipeline (**collect → model → publish → visualize → explain**).
+
+### ⚙️ How to Run
+
+**Using the local source CSV in this repo:**
+    python assgn5/collect_sample.py --input "data/assgn5_source.csv" --output "data/assgn5_sample.csv"
+
+### 📂 Inputs & Outputs
+- Input:  data/assgn5_source.csv
+- Output: data/assgn5_sample.csv
+- Purpose: produce a smaller, reproducible sample for BigQuery → Grafana visualization.
+"""
+
 #!/usr/bin/env python3
 # assgn5/collect_sample.py
 import argparse, os, ssl, tempfile

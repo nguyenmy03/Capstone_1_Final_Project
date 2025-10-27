@@ -1,0 +1,80 @@
+[
+  {
+    "name": "order_id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Unique identifier for each order"
+  },
+  {
+    "name": "order_ts",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Exact date and time when the order was placed"
+  },
+  {
+    "name": "order_date",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Date part of the order timestamp"
+  },
+  {
+    "name": "customer_id",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Unique ID of the customer placing the order"
+  },
+  {
+    "name": "region",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Geographical region of the customer (e.g., South, West, Midwest, Northeast)"
+  },
+  {
+    "name": "channel",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Sales channel where the order was made (e.g., Online, Retail, Partner)"
+  },
+  {
+    "name": "product_category",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Category of the product sold (e.g., Components, Laptops, Accessories)"
+  },
+  {
+    "name": "product_name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Specific product name or model"
+  },
+  {
+    "name": "units",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Number of product units ordered"
+  },
+  {
+    "name": "unit_price",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Price per unit before discount"
+  },
+  {
+    "name": "discount_pct",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Discount percentage applied to the product"
+  },
+  {
+    "name": "unit_price_effect",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Effective unit price after discount is applied"
+  },
+  {
+    "name": "revenue",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Total revenue for the order (unit_price_effect * units)"
+  }
+]

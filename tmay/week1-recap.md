@@ -22,11 +22,15 @@ I love Vietnamese food, especially Pho, because it reminds me of home. The warm 
 
 In my free time, I like hanging out with my besties to go shopping and enjoy delicious food together. 
 
-# Tell Me About Yourself (TMAY)
+
+## Tell Me About Yourself (TMAY)
 I was born and grew up in Ho Chi Minh City, Vietnam. From May 2023 to 2024, I worked at Dream Viet Education company as a Business Assistant. In this job, I helped students choose learning paths, supported the sales team with campaigns, and managed student data by level, age, and their results for the academic team. I enjoyed this work because I could see how data and reports improved student learning and company strategy.
-
-After working at Dream Viet, I thought I needed more knowledge and skills, so I decided to study abroad in the United States. Studying here has helped me a lot because improve my English, give me new experiences, and let me learn news tools for business. 
-
+After working at Dream Viet, I thought I needed more knowledge and skills, so I decided to study abroad in the United States. Studying here has helped me a lot because improve my English, give me new experiences, and let me learn news tools for business.
 In the summer of this year, I am a Teaching Assistant at the University of the Pacific’s Summer High School Institute. I helped students create digital media projects like blogs, vlogs, podcasts, and reels. This role helped me improve my communication, teamwork, and project management skills.
-
 Now I am pursuing a Master of Business Analytics, where I study tools like JMP, Excel, Power BI, and GitLab to understand data and trends. In the future, I want to work in business analytics. I hope to learn more about collecting and analyzing data to support business. My long term goal is to grow into a role that combines analytics, communication, and leadership, so I can have a good career after graduation.
+
+## Classmates' TMAY
+Chau shared about her interest in business  and the reason why her want to study business analyctis, told me her career journey and experiences in business analytics. 
+
+Meghana introduced herself and her major for bachelor in India. She loves business so she chose UOP to persume master. 
+

@@ -1,63 +1,11 @@
+# Networking Log
 
-| Contact # | Date       | Job Link & Title                                           | URL                                                                 | Name of Person(s) Contacted With | LinkedIn URL                                                     | Status                            | Notes About Position/People    
-
-## Contact 10
-- **Date:** 11/05/2025  
-- **Job Link & Title:** [Microsoft – Business Strategy Analyst](https://www.linkedin.com/jobs/view/4333276310)  
-- **Contacted Person:** [Cara Martin, CMP](https://www.linkedin.com/in/cara-martin-cmp-9585ab7/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** VESS Coordinator  
-
----
-
-## Contact 11
-- **Date:** 11/05/2025  
-- **Job Link & Title:** [First American – Data Business Analyst (Remote)](https://www.linkedin.com/jobs/view/4332303059)  
-- **Contacted Person:** [Hannah Houda](https://www.linkedin.com/in/hannah-houda/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** HR Business Partner at First American  
-
----
-
-## Contact 12
-- **Date:** 11/05/2025  
-- **Job Link & Title:** [Google – Associate Finance Analyst, University Graduate](https://www.linkedin.com/jobs/view/4319565366)  
-- **Contacted Person:** [Howard Lee](https://www.linkedin.com/in/minglee199668/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** Software Engineer  
-
----
-
-## Contact 13
-- **Date:** 11/07/2025  
-- **Job Link & Title:** [City and County of San Francisco – Business Analyst](https://www.linkedin.com/jobs/view/4321278783)  
-- **Contacted Person:** [Myron J.](https://www.linkedin.com/in/myron-j/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** Principal Tax Auditor–Appraiser at City and County of San Francisco  
-
----
-
-## Contact 14
-- **Date:** 11/07/2025  
-- **Job Link & Title:** [Aegon – Finance Reporting Analyst Intern (Spring 2026, Full-Time Hours)](https://www.linkedin.com/jobs/view/4338090338)  
-- **Contacted Person:** [Christopher Cajigan](https://www.linkedin.com/in/christopher-cajigan-969675154/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** B.A. in Communications  
-
----
-
-## Contact 15
-- **Date:** 11/07/2025  
-- **Job Link & Title:** [Meta – Marketing Analyst](https://www.linkedin.com/jobs/view/4332106802)  
-- **Contacted Person:** [Lizzie Moncrief](https://www.linkedin.com/in/moncriefelizabeth/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** Music, Legal at Meta  
-
----
-
-## Contact 16
-- **Date:** 11/07/2025  
-- **Job Link & Title:** [Walmart – Staff, Data Scientist (USA)](https://www.linkedin.com/jobs/view/4332694970)  
-- **Contacted Person:** [Jenny Ngo](https://www.linkedin.com/in/jennyxngo/)  
-- **Status:** Sent a message for connection request  
-- **Notes About Position/People:** Inpatient Pharmacist @ Central Valley Specialty Hospital  
+| Contact # | Date       | Job Link & Title                                           | URL                                                                 | Name of Person(s) Contacted With | LinkedIn URL                                                     | Status                            | Notes About Position/People |
+|-----------|------------|------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------|------------------------------------|-----------------------------|
+| 10        | 2025-11-05 | Microsoft – Business Strategy Analyst                     | https://www.linkedin.com/jobs/view/4333276310                      | Cara Martin, CMP                 | https://www.linkedin.com/in/cara-martin-cmp-9585ab7/            | Sent a message for connection request | VESS Coordinator |
+| 11        | 2025-11-05 | First American – Data Business Analyst (Remote)           | https://www.linkedin.com/jobs/view/4332303059                      | Hannah Houda                      | https://www.linkedin.com/in/hannah-houda/                       | Sent a message for connection request | HR Business Partner at First American |
+| 12        | 2025-11-05 | Google – Associate Finance Analyst, University Graduate   | https://www.linkedin.com/jobs/view/4319565366                      | Howard Lee                         | https://www.linkedin.com/in/minglee199668/                      | Sent a message for connection request | Software Engineer |
+| 13        | 2025-11-07 | City & County of San Francisco – Business Analyst          | https://www.linkedin.com/jobs/view/4321278783                      | Myron J.                           | https://www.linkedin.com/in/myron-j/                            | Sent a message for connection request | Principal Tax Auditor–Appraiser |
+| 14        | 2025-11-07 | Aegon – Finance Reporting Analyst Intern (Spring 2026)    | https://www.linkedin.com/jobs/view/4338090338                      | Christopher Cajigan               | https://www.linkedin.com/in/christopher-cajigan-969675154/      | Sent a message for connection request | B.A. in Communications |
+| 15        | 2025-11-07 | Meta – Marketing Analyst                                  | https://www.linkedin.com/jobs/view/4332106802                      | Lizzie Moncrief                   | https://www.linkedin.com/in/moncriefelizabeth/                  | Sent a message for connection request | Music, Legal at Meta |
+| 16        | 2025-11-07 | Walmart – Staff, Data Scientist (USA)                     | https://www.linkedin.com/jobs/view/4332694970                      | Jenny Ngo                          | https://www.linkedin.com/in/jennyxngo/                          | Sent a message for connection request | Inpatient Pharmacist @ Central Valley Specialty Hospital |

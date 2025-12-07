@@ -197,22 +197,12 @@ This analysis is valuable for music producers, marketers, streaming platforms, a
 
 ---
 
-## **6. Appendix (Screenshot Placeholders)**
+## **6. GRAFANA DASHBOARD OVERVIEW **
+![DASHBOARD OVERVIEW](Dashboard_Screenshots/OV_1.png)
+![DASHBOARD OVERVIEW](Dashboard_Screenshots/OV_2.png)
+![DASHBOARD OVERVIEW](Dashboard_Screenshots/OV_3.png)
+![DASHBOARD OVERVIEW](Dashboard_Screenshots/OV_4.png)
 
-Use this area to insert final screenshots.
-
-```
-### Dashboard Overview  
-![Dashboard Overview](ADD_IMAGE_HERE)
-
-### Data Cleaning Steps  
-![Data Cleaning](ADD_IMAGE_HERE)
-
-### SQL Queries Used  
-![SQL Code](ADD_IMAGE_HERE)
-
-### Grafana Panels  
-![Grafana Panel Screenshot](ADD_IMAGE_HERE)
 ```
 
 ---

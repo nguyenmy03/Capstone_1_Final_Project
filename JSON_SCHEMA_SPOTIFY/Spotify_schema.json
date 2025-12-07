@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Track",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Song title as it appears on Spotify."
+  },
+  {
+    "name": "Album_Name",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Name of the album or single the track belongs to."
+  },
+  {
+    "name": "Artist",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Primary performing artist for the track."
+  },
+  {
+    "name": "Release_Date",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Official release date of the track."
+  },
+  {
+    "name": "All_Time_Spotify_Rank",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "All-time ranking of the track on Spotify by total streams (1 = most streamed)."
+  },
+  {
+    "name": "Track_Score",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Composite track score summarizing performance across platforms."
+  },
+  {
+    "name": "Spotify_Streams",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total number of Spotify streams for the track."
+  },
+  {
+    "name": "Spotify_Popularity",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Spotify popularity score for the track (0–100, higher = more popular)."
+  },
+  {
+    "name": "YouTube_Views",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total number of YouTube views associated with the track."
+  },
+  {
+    "name": "YouTube_Likes",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total number of YouTube likes associated with the track."
+  },
+  {
+    "name": "Explicit_Track_Ratings",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Explicit flag for the track (1 = explicit content, 0 = non-explicit)."
+  },
+  {
+    "name": "Shazam_Counts",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total number of Shazam recognitions for the track."
+  }
+]

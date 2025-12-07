@@ -1,0 +1,1070 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This pie chart shows the top 10 artists with the highest total YouTube likes. Each slice represents an artist’s share of total engagement, helping identify which artists generate the strongest audience reaction.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "sort": "desc",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Artist AS label,\n  SUM(CAST(REPLACE(CAST(YouTube_Likes AS STRING), ',', '') AS INT64)) AS value\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nWHERE\n  YouTube_Likes IS NOT NULL\nGROUP BY\n  Artist\nORDER BY\n  value DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "YouTube Likes by Artist – Top 10",
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This line chart shows how Spotify popularity changes over time based on each song’s release month. By averaging popularity scores by month, the visualization highlights overall trends in listeners’ engagement. It helps reveal whether interest in music increases, decreases, or stays consistent across different release periods.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "fieldMinMax": true,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP(DATE_TRUNC(Release_Date, MONTH)) AS time,  -- 👈 make it TIMESTAMP\n  AVG(Spotify_Popularity) AS avg_popularity\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nWHERE\n  Release_Date IS NOT NULL\nGROUP BY\n  time\nORDER BY\n  time;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Average Spotify Popularity Over Time",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This stat shows the number of unique artists and the total number of tracks in the dataset. It provides a quick overview of the dataset’s diversity and overall content size.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "light-purple",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  COUNT(DISTINCT Artist) AS total_artists,\n  COUNT(*) AS total_tracks\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "STAT-Total Artists and Total Tracks",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This chart compares monthly Spotify streams and YouTube views by summing total engagement for all songs released each month. It highlights which months had the highest listener and viewer activity across both platforms.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP(DATE_TRUNC(Release_Date, MONTH)) AS time,  -- time axis\n  SUM(Spotify_Streams) AS spotify_streams,\n  SUM(YouTube_Views) AS youtube_views\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nWHERE\n  Release_Date IS NOT NULL\nGROUP BY\n  time\nORDER BY\n  time;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Spotify Streams vs YouTube Views",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This table lists the ten most popular tracks ranked by Spotify popularity. It allows quick comparison of the most successful songs in the dataset.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 9,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Track,\n  Artist,\n  SAFE_CAST(Spotify_Popularity AS FLOAT64) AS Popularity\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nORDER BY\n  Popularity DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Top 10 Most Popular Tracks",
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This statistic represents the total number of Spotify streams across all tracks in the dataset. It provides an overall view of streaming volume and listener activity on the platform.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  SUM(Spotify_Streams) AS total_spotify_streams\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Total Spotify Streams",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This chart shows each artist’s tracks based on their average Spotify popularity. Higher bars highlight songs that receive stronger listener engagement. It helps identify the most impactful tracks for each artist.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "fillOpacity": 51,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 24
+      },
+      "id": 8,
+      "options": {
+        "combine": false,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "maxWidth": 4,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Artist AS source,\n  Track AS target,\n  ROUND(AVG(SAFE_CAST(Spotify_Popularity AS FLOAT64)), 2) AS value\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nWHERE\n  Artist IS NOT NULL\n  AND Track IS NOT NULL\nGROUP BY\n  Artist, Track\nORDER BY\n  value DESC;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Artist–Track Popularity Histogram",
+      "transparent": true,
+      "type": "histogram"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This bar gauge compares artists based on their average YouTube likes.\nEach bar represents how strongly audiences engage with an artist’s music on YouTube.\nHigher bars indicate artists with consistently stronger fan interaction and visibility.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 24
+      },
+      "id": 7,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Artist AS category,\n  ROUND(AVG(YouTube_Likes), 2) AS value\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nWHERE\n  YouTube_Likes IS NOT NULL\nGROUP BY\n  category\nORDER BY\n  value DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Average YouTube Likes by Artist (Top 10)",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This bar chart displays the top 10 artists with the highest total YouTube likes. It highlights which artists receive the strongest audience engagement on the platform. Higher bars indicate greater viewer interaction and popularity across YouTube.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "id": 2,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Artist,\n  SUM(YouTube_Likes) AS total_youtube_likes\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nGROUP BY\n  Artist\nORDER BY\n  total_youtube_likes DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Top 10 Artists by YouTube Likes",
+      "transparent": true,
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-bigquery-datasource",
+        "uid": "cexkopj6y4lj4d"
+      },
+      "description": "This chart shows which artists have the highest total Spotify streams. It highlights overall listening dominance and helps identify the most popular artists in the dataset. Higher bars represent stronger audience engagement.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 24,
+        "x": 0,
+        "y": 40
+      },
+      "id": 1,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.4.0-19576184216.patch1",
+      "targets": [
+        {
+          "dataset": "final_pres_data",
+          "datasource": {
+            "type": "grafana-bigquery-datasource",
+            "uid": "cexkopj6y4lj4d"
+          },
+          "editorMode": "code",
+          "format": 1,
+          "location": "US",
+          "project": "msba285-fall25-student",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  Artist,\n  SUM(Spotify_Streams) AS total_spotify_streams\nFROM\n  `msba285-fall25-student.final_pres_data.NMS_Final_Spotify_PUB`\nGROUP BY\n  Artist\nORDER BY\n  total_spotify_streams DESC\nLIMIT 10;\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "NMS_Final_Spotify_PUB"
+        }
+      ],
+      "title": "Total Spotify Streams by Artist (Top 10)",
+      "transparent": true,
+      "type": "barchart"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2010-07-01T00:00:00.000Z",
+    "to": "2024-06-01T00:00:00.000Z"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "NMS_Final",
+  "uid": "nscmcsd",
+  "version": 39
+}

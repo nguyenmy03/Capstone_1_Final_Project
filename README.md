@@ -1,114 +1,104 @@
-🎧 Capstone 1 – Spotify Analytics Project
+# 🎧 **Capstone 1 – Spotify Analytics Project**
+**BigQuery • Grafana • VS Code • GitHub**
 
-BigQuery • Grafana • VS Code • GitHub
+---
 
-👩‍💻 Author
+## **👩‍💻 Author**
+- **Nguyen My San**
+- *Master of Science in Business Analytics*
+- **University of the Pacific**
+---
 
-Nguyen My San
-
-Master of Science in Business Analytics
-
-📌 Project Overview
-
-This capstone project focuses on analyzing Spotify music data using Google BigQuery for scalable data storage and SQL analytics, and Grafana for interactive dashboard visualization.
+## **📌 Project Overview**
+This capstone project focuses on analyzing **Spotify music data** using **Google BigQuery** for scalable data storage and SQL analytics, and **Grafana** for interactive dashboard visualization.  
 The project explores music trends, audio features, and cross-platform insights to support data-driven decision making.
 
-🎯 Project Objectives
+---
 
-Collect Spotify data using API scripts
+## **🎯 Project Objectives**
+- Collect Spotify data using API scripts
+- Clean and preprocess raw datasets
+- Design structured schemas for BigQuery
+- Perform analytical queries using SQL
+- Build interactive dashboards in Grafana
+- Communicate insights through reports and presentations
 
-Clean and preprocess raw datasets
+---
 
-Design structured schemas for BigQuery
+## **🛠️ Tools & Technologies**
+- **Google BigQuery** – Data warehousing and SQL analytics
+- **Grafana** – Dashboard and data visualization
+- **Python** – Data collection and preprocessing
+- **VS Code** – Development environment
+- **Git & GitHub** – Version control and collaboration
 
-Perform analytical queries using SQL
+---
 
-Build interactive dashboards in Grafana
-
-Communicate insights through reports and presentations
-
-🛠️ Tools & Technologies
-
-Google BigQuery – Data warehousing and SQL analytics
-
-Grafana – Dashboard and data visualization
-
-Python – Data collection and preprocessing
-
-VS Code – Development environment
-
-Git & GitHub – Version control and collaboration
-
-📂 Project Structure
+## **📂 Project Structure**
 Capstone_1_Final_Project/
 │
-├── API_datacollection_Script/   # Python scripts for Spotify API data collection
-├── DATA_CLEANING/               # Data cleaning and preprocessing logic
-├── DATA_Spotify/                # Raw and processed Spotify datasets
-├── Dashboard_Screenshots/       # Grafana dashboard screenshots
-├── Final_Presentation/          # Final project presentation slides
-├── Final_Project_Report/        # Final written project report
-├── Grafana_Dashboard_Model/     # Exported Grafana dashboard JSON files
-├── JSON_SCHEMA_SPOTIFY/         # BigQuery JSON schema definitions
-├── .gitignore                   # Git ignored files configuration
-├── LICENSE                      # MIT license
-└── README.md                    # Project documentation
+├── API_datacollection_Script/ # Python scripts for Spotify API data collection
+├── DATA_CLEANING/ # Data cleaning and preprocessing logic
+├── DATA_Spotify/ # Raw and processed Spotify datasets
+├── Dashboard_Screenshots/ # Grafana dashboard screenshots
+├── Final_Presentation/ # Final project presentation slides
+├── Final_Project_Report/ # Final written project report
+├── Grafana_Dashboard_Model/ # Exported Grafana dashboard JSON files
+├── JSON_SCHEMA_SPOTIFY/ # BigQuery JSON schema definitions
+├── .gitignore # Git ignored files configuration
+├── LICENSE # MIT license
+└── README.md # Project documentation
 
-📊 Key Analyses
+---
 
-Song and artist popularity trends
+## **📊 Key Analyses**
+- **Song and artist popularity trends**
+- **Audio feature analysis** (danceability, energy, tempo)
+- **Cross-platform comparison insights**
+- **KPI monitoring using SQL queries**
 
-Audio feature analysis (danceability, energy, tempo)
+---
 
-Cross-platform comparison insights
-
-KPI monitoring using SQL queries
-
-📈 Grafana Dashboards
-
+## **📈 Grafana Dashboards**
 Interactive Grafana dashboards are used to visualize:
-
-Top tracks and artists
-
-Feature comparison metrics
-
-Time-based listening trends
+- Top tracks and artists
+- Feature comparison metrics
+- Time-based listening trends
 
 Dashboard models are stored in:
-
 Grafana_Dashboard_Model/
 
-🚀 How to Run This Project
+---
 
-Upload Spotify datasets to Google BigQuery
+## **🚀 How to Run This Project**
+1. Upload Spotify datasets to **Google BigQuery**
+2. Create tables using schema files in `JSON_SCHEMA_SPOTIFY`
+3. Execute analytical SQL queries
+4. Connect **BigQuery** as a data source in **Grafana**
+5. Import dashboard JSON files
+6. Review insights via dashboards and reports
 
-Create tables using schema files in JSON_SCHEMA_SPOTIFY
+---
 
-Execute analytical SQL queries
+## **🔒 Data Security & Privacy**
+- API keys and credentials are **not included**
+- Sensitive files are excluded using `.gitignore`
 
-Connect BigQuery as a data source in Grafana
+---
 
-Import dashboard JSON files
+## **📄 License**
+This project is licensed under the **MIT License**.
 
-Review insights via dashboards and reports
+---
 
-🔒 Data Security & Privacy
+## **⭐ Acknowledgements**
+- Spotify public datasets
+- University of the Pacific – **MSBA Program**
 
-API keys and credentials are not included
+---
 
-Sensitive files are excluded using .gitignore
-
-📄 License
-
-This project is licensed under the MIT License.
-
-⭐ Acknowledgements
-
-Spotify public datasets
-
-University of the Pacific – MSBA Program
-
-✅ Save & Push README
+### **✅ Save & Push README**
+```bash
 git add README.md
 git commit -m "Update README with formatted headers and project structure"
 git push

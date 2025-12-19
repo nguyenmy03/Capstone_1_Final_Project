@@ -36,17 +36,29 @@ The project explores music trends, audio features, and cross-platform insights t
 
 ## **📂 Project Structure**
 Capstone_1_Final_Project/
+
 │
+
 ├── API_datacollection_Script/
+
 ├── DATA_CLEANING/
+
 ├── DATA_Spotify/
+
 ├── Dashboard_Screenshots/
+
 ├── Final_Presentation/
+
 ├── Final_Project_Report/
+
 ├── Grafana_Dashboard_Model/
+
 ├── JSON_SCHEMA_SPOTIFY/
+
 ├── .gitignore
+
 ├── LICENSE
+
 └── README.md
 
 

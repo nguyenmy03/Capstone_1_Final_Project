@@ -34,9 +34,9 @@ The project explores music trends, audio features, and cross-platform insights t
 
 ---
 
-## **📂 Project Structure**
 ## 📂 Project Structure
 
+```text
 Capstone_1_Final_Project/
 ├── API_datacollection_Script/
 ├── DATA_CLEANING/
@@ -49,6 +49,7 @@ Capstone_1_Final_Project/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+```
 
 
 

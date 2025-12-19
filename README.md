@@ -37,17 +37,18 @@ The project explores music trends, audio features, and cross-platform insights t
 ## **📂 Project Structure**
 Capstone_1_Final_Project/
 │
-├── API_datacollection_Script/ # Python scripts for Spotify API data collection
-├── DATA_CLEANING/ # Data cleaning and preprocessing logic
-├── DATA_Spotify/ # Raw and processed Spotify datasets
-├── Dashboard_Screenshots/ # Grafana dashboard screenshots
-├── Final_Presentation/ # Final project presentation slides
-├── Final_Project_Report/ # Final written project report
-├── Grafana_Dashboard_Model/ # Exported Grafana dashboard JSON files
-├── JSON_SCHEMA_SPOTIFY/ # BigQuery JSON schema definitions
-├── .gitignore # Git ignored files configuration
-├── LICENSE # MIT license
-└── README.md # Project documentation
+├── API_datacollection_Script/
+├── DATA_CLEANING/
+├── DATA_Spotify/
+├── Dashboard_Screenshots/
+├── Final_Presentation/
+├── Final_Project_Report/
+├── Grafana_Dashboard_Model/
+├── JSON_SCHEMA_SPOTIFY/
+├── .gitignore
+├── LICENSE
+└── README.md
+
 
 ---
 

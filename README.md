@@ -1,4 +1,4 @@
-🎧 Capstone 1 – Spotify Analytics Project
+🎧 ## Capstone 1 – Spotify Analytics Project ##
 
 BigQuery • Grafana • VS Code • GitHub
 

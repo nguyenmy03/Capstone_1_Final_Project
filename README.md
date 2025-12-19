@@ -1,101 +1,102 @@
-🎧 ## Capstone 1 – Spotify Analytics Project ##
+🎧 Capstone 1 – Spotify Analytics Project
 
 BigQuery • Grafana • VS Code • GitHub
 
 👩‍💻 Author
 
 Nguyen My San
-MS in Business Analytics
+
+Master of Science in Business Analytics
 
 📌 Project Overview
 
-This capstone project focuses on analyzing Spotify music data using Google BigQuery for large-scale data storage and SQL analytics, and Grafana for interactive data visualization.
+This capstone project focuses on analyzing Spotify music data using Google BigQuery for scalable data storage and SQL analytics, and Grafana for interactive dashboard visualization.
 The project explores music trends, audio features, and cross-platform insights to support data-driven decision making.
 
-🎯 Objectives
+🎯 Project Objectives
 
-Collect and prepare Spotify data
+Collect Spotify data using API scripts
 
-Clean and transform raw datasets
+Clean and preprocess raw datasets
 
-Design schemas for BigQuery
+Design structured schemas for BigQuery
 
-Analyze music trends using SQL
+Perform analytical queries using SQL
 
-Build interactive Grafana dashboards
+Build interactive dashboards in Grafana
 
-Present insights through reports and presentations
+Communicate insights through reports and presentations
 
 🛠️ Tools & Technologies
 
-Google BigQuery – Data storage and SQL analysis
+Google BigQuery – Data warehousing and SQL analytics
 
-Grafana – Dashboard visualization
+Grafana – Dashboard and data visualization
 
-Python – Data collection and cleaning
+Python – Data collection and preprocessing
 
 VS Code – Development environment
 
-Git & GitHub – Version control
+Git & GitHub – Version control and collaboration
 
 📂 Project Structure
 Capstone_1_Final_Project/
 │
 ├── API_datacollection_Script/   # Python scripts for Spotify API data collection
-├── DATA_CLEANING/               # Data cleaning and preprocessing scripts
+├── DATA_CLEANING/               # Data cleaning and preprocessing logic
 ├── DATA_Spotify/                # Raw and processed Spotify datasets
-├── Dashboard_Screenshots/       # Images of Grafana dashboards
-├── Final_Presentation/          # Final presentation slides
+├── Dashboard_Screenshots/       # Grafana dashboard screenshots
+├── Final_Presentation/          # Final project presentation slides
 ├── Final_Project_Report/        # Final written project report
 ├── Grafana_Dashboard_Model/     # Exported Grafana dashboard JSON files
 ├── JSON_SCHEMA_SPOTIFY/         # BigQuery JSON schema definitions
-├── .gitignore                   # Ignored files configuration
+├── .gitignore                   # Git ignored files configuration
 ├── LICENSE                      # MIT license
 └── README.md                    # Project documentation
 
 📊 Key Analyses
 
-Popularity trends of songs and artists
+Song and artist popularity trends
 
 Audio feature analysis (danceability, energy, tempo)
 
 Cross-platform comparison insights
 
-KPI tracking using SQL queries
+KPI monitoring using SQL queries
 
 📈 Grafana Dashboards
 
-Grafana dashboards visualize key Spotify metrics including:
+Interactive Grafana dashboards are used to visualize:
 
 Top tracks and artists
 
-Feature comparisons
+Feature comparison metrics
 
-Trend analysis over time
+Time-based listening trends
 
 Dashboard models are stored in:
 
 Grafana_Dashboard_Model/
 
-🚀 How to Use This Project
+🚀 How to Run This Project
 
-Load Spotify datasets into BigQuery
+Upload Spotify datasets to Google BigQuery
 
-Create tables using JSON schemas in JSON_SCHEMA_SPOTIFY
+Create tables using schema files in JSON_SCHEMA_SPOTIFY
 
-Run SQL queries to generate insights
+Execute analytical SQL queries
 
-Connect BigQuery to Grafana
+Connect BigQuery as a data source in Grafana
 
 Import dashboard JSON files
 
-Review dashboard screenshots and reports
+Review insights via dashboards and reports
 
-🔒 Data & Security
+🔒 Data Security & Privacy
 
-No API keys or credentials are included
+API keys and credentials are not included
 
-Sensitive files are excluded via .gitignore
+Sensitive files are excluded using .gitignore
 
 📄 License
 
@@ -107,7 +108,7 @@ Spotify public datasets
 
 University of the Pacific – MSBA Program
 
-✅ Push this README to GitHub
+✅ Save & Push README
 git add README.md
-git commit -m "Update README with project structure"
+git commit -m "Update README with formatted headers and project structure"
 git push
